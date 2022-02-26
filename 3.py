@@ -15,14 +15,14 @@ class Solution:
         index = 0
 
         for i in range(len(strs)):
-            for j in range(len(strs)):
-                if index < len(strs)-1:
-                    if strs[index][:min_l] == strs[index+1][:min_l]:
+            for j in range(len(strs)):  # 限制比較的次數
+                if index < len(strs) - 1:  # 看是不是比到最後了
+                    if strs[index][:min_l] == strs[index + 1][:min_l]:
                         index += 1
                     else:
                         min_l -= 1
         return strs[0][:min_l]
 
 
-sol = Solution().longestCommonPrefix(["flower","fkow"])
+sol = Solution().longestCommonPrefix(["flower", "fkow", "flowwww"])
 print(sol)
