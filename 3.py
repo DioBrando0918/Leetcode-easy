@@ -9,4 +9,20 @@ If there is no common prefix, return an empty string "".
 
 class Solution:
     def longestCommonPrefix(self, strs: "list[str]") -> str:
+        if not strs:
+            return ""
+        min_l = min(map(len, strs))
+        index = 0
 
+        for i in range(len(strs)):
+            for j in range(len(strs)):
+                if index < len(strs)-1:
+                    if strs[index][:min_l] == strs[index+1][:min_l]:
+                        index += 1
+                    else:
+                        min_l -= 1
+        return strs[0][:min_l]
+
+
+sol = Solution().longestCommonPrefix(["flower","fkow"])
+print(sol)
