@@ -17,18 +17,25 @@ class ListNode:
 
 
 class Solution:
-    def mergeTwoLists(self, l1, l2):
-        if not l1 or not l2:
-            return l1 or l2
-            # 比较l1和l2的值的大小
-        if l1.val < l2.val:
-            # 将l2递归到l1上
-            l1.next = self.mergeTwoLists(l1.next, l2)
-            return l1
-        else:
-            # 将l1递归到l2上
-            l2.next = self.mergeTwoLists(l2.next, l1)
-            return l2
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        dum = ListNode(None)
+        prev = dum
+
+        while l1 and l2:
+            if l1.val <= l2.val:
+                prev.next = l1
+                l1 = l1.next
+            else:
+                prev.next = l2
+                l2 = l2.next
+            prev = prev.next
+
+        if l1 == None:
+            prev.next = l2
+        elif l2 == None:
+            prev.next = l1
+
+        return dum.next
 
 
 # 有序鍊表1
