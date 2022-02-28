@@ -1,9 +1,3 @@
-import sys
-sys.setrecursionlimit(3000000)
+a = [1, 3, 2, 2, 4]
 
-def func (n):
-    print(n)
-    n+=1
-    func(n)
-
-func(1)
+print(len((set(a))))
