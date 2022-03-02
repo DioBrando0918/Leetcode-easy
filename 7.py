@@ -21,5 +21,5 @@ class Solution:
         return len(nums)
 
 
-sol, nums = Solution().removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)
-print(sol, nums)
+sol = Solution().removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)
+print(sol)

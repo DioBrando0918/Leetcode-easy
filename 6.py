@@ -24,7 +24,7 @@ Do not allocate extra space for another array. You must do this by modifying the
 #                 nums[i - 1] = nums[i]
 #         return new_length + 1
 
-#--------也抱錯---------------
+# --------也抱錯---------------
 # class Solution:
 #     def removeDuplicates(self, nums: 'List[int]') -> int:
 #         if not nums:
@@ -39,14 +39,14 @@ Do not allocate extra space for another array. You must do this by modifying the
 #             if j < len(nums) -1:
 #                 if nums[j] == nums[j + 1]:
 #                     nums.remove(nums[j + 1])
-#---------------正解-------------------
+# ---------------正解-------------------
 class Solution:
     def removeDuplicates(self, nums):
-'''
-:param nums: list[int]
-:return:int
         '''
-# 如果数组为空，则返回0
+        :param nums: list[int]
+        :return:int
+                '''
+        # 如果数组为空，则返回0
         if not nums:
             return 0
         new_length = 0
@@ -58,6 +58,7 @@ class Solution:
                 new_length += 1
                 nums[new_length] = nums[i]
         return new_length + 1
+
 
 sol = Solution().removeDuplicates([0, 0, 0, 0, 0])
 print(sol)
