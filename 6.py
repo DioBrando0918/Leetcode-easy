@@ -5,9 +5,9 @@ Return k after placing the final result in the first k slots of nums.
 Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
 給定一個按非遞減順序排序的整數數組 nums，就地刪除重複項，使每個唯一元素只出現一次。元素的相對順序應保持不變。
-由於在某些語言中無法更改數組的長度，因此您必須將結果放在數組 nums 的第一部分。更正式地說，如果刪除重複項後有 k 個元素，則 nums 的前 k 個元素應該保存最終結果。在前 k 個元素之外留下什麼並不重要。
-將最終結果放入 nums 的前 k 個槽後返回 k。
-不要為另一個數組分配額外的空間。您必須通過使用 O(1) 額外內存就地修改輸入數組來做到這一點。
+由於在某些語言中無法更改數組的長度，因此您必須將結果放在數組 nums的第一部分。更正式地說，如果刪除重複項後有 k個元素，則 nums的前 k個元素應該保存最終結果。在前 k個元素之外留下什麼並不重要。
+將最終結果放入 nums的前 k個槽後返回 k。
+不要為另一個數組分配額外的空間。您必須通過使用 O(1)額外內存就地修改輸入數組來做到這一點。
 """
 
 
@@ -39,14 +39,14 @@ Do not allocate extra space for another array. You must do this by modifying the
 #             if j < len(nums) -1:
 #                 if nums[j] == nums[j + 1]:
 #                     nums.remove(nums[j + 1])
-# -------------正解-------------------
+#---------------正解-------------------
 class Solution:
     def removeDuplicates(self, nums):
+'''
+:param nums: list[int]
+:return:int
         '''
-        :param nums: list[int]
-        :return:int
-        '''
-        # 如果数组为空，则返回0
+# 如果数组为空，则返回0
         if not nums:
             return 0
         new_length = 0
