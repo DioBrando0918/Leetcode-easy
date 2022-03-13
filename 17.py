@@ -4,11 +4,8 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 """
 
 
-class Solution:
-    def inorderTraversal(self, root: 'Optional[TreeNode]') -> 'List[int]':
-        if root is None:
-            return []
-        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
-
-
+def inorderTraversal(self, root: 'Optional[TreeNode]') -> 'List[int]':
+    if self.root is None:
+        return []
+    return self.inorderTraversal(self.root.left) + [self.root.val] + self.inorderTraversal(self.root.right)
 
