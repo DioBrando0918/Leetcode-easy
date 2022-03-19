@@ -17,10 +17,21 @@ class Solution:
         def to_bst(nums, start, end):
             if start > end:
                 return None
-            mid = (start + end) // 2
+            mid = (start + end) // 2  # 向下取整
             node = TreeNode(nums[mid])
             node.left = to_bst(nums, start, mid - 1)
             node.right = to_bst(nums, mid + 1, end)
             return node
 
         return to_bst(nums, 0, len(nums) - 1)
+
+
+def inorderTraversal(root: 'Optional[TreeNode]') -> 'List[int]':
+    if root is None:
+        return []
+    return inorderTraversal(root.left) + [root.val] + inorderTraversal(root.right)
+
+
+sol = Solution().sortedArrayToBST([-10, -3, 0, 5, 9])
+ans = inorderTraversal(sol)
+print(ans)
