@@ -8,6 +8,7 @@ Do not allocate extra space for another array. You must do this by modifying the
 """
 
 
+# remove()無法全部移除,會留下一個
 class Solution:
     def removeElement(self, nums: 'list[int]', val: 'int') -> int:
         length = len(nums)
@@ -15,7 +16,7 @@ class Solution:
         while x < length:
             if nums[x] == val:
                 nums.remove(val)
-                x -= 1  # 假設現在索引值為2 value為2, remove掉2的話 index3的2會往前推 讓他繼續跟index4的3比較 所以x要-=1
+                x -= 1  # index0 被移掉的話 後面的1會往前推 所以x要-=1後面在加回來
                 length -= 1  # 因為remove掉一個 所以-1 否則會超出索引error
             x += 1  # 要加1才能繼續取新的索引值
         return len(nums)
