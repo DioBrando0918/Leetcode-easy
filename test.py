@@ -11,13 +11,25 @@
 # print(fact(4))  # 24
 
 # print(7//2)
-ans = ['a', 'm', 'a', 'n', 'a', 'p', 'l', 'a', 'n', 'a', 'c', 'a', 'n', 'a', 'l', 'p', 'a', 'n', 'a', 'm', 'a']
-ans = "".join(ans)
-print(ans)
+# ans = ['a', 'm', 'a', 'n', 'a', 'p', 'l', 'a', 'n', 'a', 'c', 'a', 'n', 'a', 'l', 'p', 'a', 'n', 'a', 'm', 'a']
+# ans = "".join(ans)
+# print(ans)
+#
+# A, B = 10, 20
+# print(A ^ B)
+# print(4 ^ 8)
+#
+# lst = [[i] for i in range(5)]
+# print(lst)
+# print(ord('A'))
+# print(chr(0))
+#
+# print(chr(74))
+# print(4//26)
 
-A, B = 10, 20
-print(A ^ B)
-print(4 ^ 8)
+lst = [3, 3, 3, 5, 7, 8]
+# print(lst.count(3))
+# print(3/2)
 
-lst = [[i] for i in range(5)]
-print(lst)
+map = {k: 0 for k in lst}
+print(map)
