@@ -42,7 +42,7 @@ class Solution:
         return res
 
 
-sol = Solution().singleNumber([2, 1, 2, 1, 5])
+sol = Solution().singleNumber([2, 4, 3, 1, 5])
 sol1 = Solution().singleNumber([4, 1, 2, 4, 1])
 
-print(sol1)
+print(sol)

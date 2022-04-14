@@ -24,6 +24,22 @@
 # print(chr(89))
 # print(700//26)
 # print(chr(90))
-map = {}
-map.clear()
-print(map)
+# map = {}
+# map.clear()
+# print(map)
+#
+# map1 = {1:2,3:4,5:2}
+# print(set(map1))
+# map1[1] = 3
+# print(map1.__contains__(4))
+# print(map1)
+#
+# print(4 in map1.values())
+
+map1 = {'b': 'b', 'a': 'a', 'd': 'b', 'c': 'a'}
+mapval = [map1[k] for k in map1]
+print(mapval)
+print(set(mapval))
+print(len(mapval))
+print(len(set(mapval)))
+
