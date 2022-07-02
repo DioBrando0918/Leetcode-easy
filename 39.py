@@ -24,6 +24,7 @@ class Solution:
             else:
                 previous = current
             current = current.next
+            # current = previous.next
         return dummy.next
 
 
